@@ -12,6 +12,7 @@ const App = () => {
       <Route path='/' element={<Navigation />}>
         <Route index element={<Home />} />
         <Route path='shop/*' element={<Shop />} />
+        {/* [wild card = /*(This just means match any root at all that follows slash what you want to redirect towords] */}
         <Route path='auth' element={<Authentication />} />
         <Route path='Checkout' element={<Checkout />} />
       </Route>

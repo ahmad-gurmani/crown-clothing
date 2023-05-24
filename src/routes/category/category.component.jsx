@@ -23,7 +23,7 @@ const Category = () => {
     }, [category, categoriesMap])
 
     return (
-        console.log("isloading", isLoading), <Fragment>
+        <Fragment>
             <Title>{category.toUpperCase()}</Title>
             {
                 isLoading ? (<Spinner />) :

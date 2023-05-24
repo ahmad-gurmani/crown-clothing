@@ -16,7 +16,7 @@ export const fetchCategoriesFailed = (error) =>
 export const fetchCategoriesAsync = () => async (dispatch) => {
     dispatch(fetchCategoriesStart());
     try {
-        const categoriesArray = await getCategoriesAndDocuments('categories');
+        const categoriesArray = await getCategoriesAndDocuments('categories');  // api call
         dispatch(fetchCategoriesSuccess(categoriesArray));
     } catch (error) {
         dispatch(fetchCategoriesFailed(error));

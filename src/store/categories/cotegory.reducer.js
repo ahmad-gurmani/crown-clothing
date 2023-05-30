@@ -19,7 +19,6 @@ export const categoriesReducer = (
                 isLoading: true
             };
         case CATEGORIES_ACTION_TYPES.FETCH_CATEGORIES_SUCCESS:
-            console.log("jlsddflksk", payload)
             return {
                 ...state,
                 isLoading: false,

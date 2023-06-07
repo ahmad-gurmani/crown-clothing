@@ -40,4 +40,3 @@ export const store = createStore(
 sagaMiddleware.run(rootSaga);
 
 export const persistor = persistStore(store);
-

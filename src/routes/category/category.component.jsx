@@ -6,8 +6,6 @@ import { selectCategoriesMap, selectCategoriesIsLoading } from '../../store/cate
 
 import ProductCard from '../../components/product-card/product-card.component';
 
-
-
 import { CategoryContainer, Title } from './category.styles.jsx'
 import Spinner from '../../components/spinner/spinner.cmponent';
 

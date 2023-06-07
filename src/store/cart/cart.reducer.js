@@ -1,10 +1,8 @@
-import { CART_ACTION_TYPES } from "./cart.type";
+import { CART_ACTION_TYPES } from './cart.type';
 
 export const CART_INITIAL_STATE = {
     isCartOpen: false,
     cartItems: [],
-    cartCount: 0,
-    cartTotal: 0
 };
 
 export const cartReducer = (state = CART_INITIAL_STATE, action = {}) => {
@@ -24,5 +22,4 @@ export const cartReducer = (state = CART_INITIAL_STATE, action = {}) => {
         default:
             return state;
     }
-
-}
+};

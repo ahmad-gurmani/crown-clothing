@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@stripe/react-stripe-js": "^2.1.0",
+    "@stripe/stripe-js": "^1.54.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "dotenv": "^16.1.4",
     "eslint-plugin-react-hooks": "^5.0.0-next-491aec5d6-20230501",
+    "express": "^4.18.2",
     "firebase": "^9.21.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -20,8 +25,11 @@
     "redux-thunk": "^2.4.2",
     "reselect": "^4.1.8",
     "sass": "^1.62.1",
+    "serverless-http": "^3.2.0",
+    "stripe": "^12.8.0",
     "styled-components": "^6.0.0-rc.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn-install": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -5,7 +5,7 @@ import {
   createAction,
   withMatcher,
 } from "../../utils/reducer/reducer.utils";
-import { selectCartItems } from "./cart.selector";
+// import { selectCartItems } from "./cart.selector";
 
 // helper function
 const addCartItem = (
@@ -55,23 +55,23 @@ const clearCartItem = (
 ): cartItem[] =>
   cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
 
-export type setIsCartOpen = ActionWithPayload<
+export type SetIsCartOpen = ActionWithPayload<
   CART_ACTION_TYPES.SET_IS_CART_OPEN,
   boolean
 >;
 
-export type setCartItems = ActionWithPayload<
+export type SetCartItems = ActionWithPayload<
   CART_ACTION_TYPES.SET_CART_ITEMS,
   cartItem[]
 >;
 
 export const setIsCartOpen = withMatcher(
-  (boolean: boolean): setIsCartOpen =>
+  (boolean: boolean): SetIsCartOpen =>
     createAction(CART_ACTION_TYPES.SET_IS_CART_OPEN, boolean)
 );
 
 export const setCartItems = withMatcher(
-  (cartItems: cartItem[]): setCartItems =>
+  (cartItems: cartItem[]): SetCartItems =>
     createAction(CART_ACTION_TYPES.SET_CART_ITEMS, cartItems)
 );
 

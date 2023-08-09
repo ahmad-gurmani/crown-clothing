@@ -8,8 +8,8 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
-  User,
   NextOrObserver,
+  User,
 } from "firebase/auth";
 import {
   getFirestore,
@@ -23,7 +23,7 @@ import {
   QueryDocumentSnapshot,
 } from "firebase/firestore";
 
-import { category } from "../../store/categories/category.types";
+import { Category } from "../../store/categories/category.types";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDDU4V-_QV3M8GyhC9SVieRTDM4dbiT0Yk",
@@ -50,11 +50,11 @@ export const signInWithGoogleRedirect = () =>
 
 export const db = getFirestore();
 
-export type objectToAdd = {
+export type ObjectToAdd = {
   title: string;
 };
 
-export const addCollectionAndDocuments = async <T extends objectToAdd>(
+export const addCollectionAndDocuments = async <T extends ObjectToAdd>(
   collectionKey: string,
   objectsToAdd: T[]
 ): Promise<void> => {
@@ -70,13 +70,13 @@ export const addCollectionAndDocuments = async <T extends objectToAdd>(
   console.log("done");
 };
 
-export const getCategoriesAndDocuments = async (): Promise<category[]> => {
+export const getCategoriesAndDocuments = async (): Promise<Category[]> => {
   const collectionRef = collection(db, "categories");
   const q = query(collectionRef);
 
   const querySnapshot = await getDocs(q);
   return querySnapshot.docs.map(
-    (docSnapshot) => docSnapshot.data() as category
+    (docSnapshot) => docSnapshot.data() as Category
   );
 };
 
@@ -85,7 +85,7 @@ export type AdditionalInformation = {
 };
 
 export type UserData = {
-  ceatedAt: Date;
+  createdAt: Date;
   displayName: string;
   email: string;
 };
